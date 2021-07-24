@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Configuration to connect to mudfoot database 
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.password">leTrkent6</property>
+		<property name="hibernate.connection.url">jdbc:mysql://mudfoot.doc.stu.mmu.ac.uk:6306/khokharm</property>
+		<property name="hibernate.connection.username">khokharm</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		-->
+		
+		<!-- Configuration to connect to the Google Cloud database -->
+		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql:///khokharm?cloudSqlInstance=restfulfilmswebservice:europe-west2:khokharmfilmsdb&amp;socketFactory=com.google.cloud.sql.mysql.SocketFactory&amp;user=root&amp;password=admin</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<property name="hibernate.c3p0.acquire_increment">5</property>
+		<property name="hibernate.c3p0.idle_test_period">3000</property>
+		<property name="hibernate.c3p0.timeout">90</property>
+		<property name="hibernate.c3p0.max_size">20</property>
+		<property name="hibernate.c3p0.max_statements">50</property>
+		<property name="hibernate.c3p0.min_size">5</property>
+		
+	</session-factory>
+</hibernate-configuration>

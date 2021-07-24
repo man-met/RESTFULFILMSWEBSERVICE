@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="./jquery-ui-1.12.1.start/jquery-ui.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+		
+		<script type="text/javascript"
+			src="./jquery-ui-1.12.1.start/external/jquery/jquery.js"></script>
+		<script type="text/javascript" src="./jquery-ui-1.12.1.start/jquery-ui.js"></script>
+		
+		<!-- custom javascript -->
+		<script type="text/javascript" src="./scripts/data_handling.js"></script>
+		<script type="text/javascript" src="./scripts/scripts.js"></script>
+		
+		<title>Films Client Service</title>
+	</head>
+	<body>
+		<h1>Google Cloud RESTFUL Interface</h1>
+		<div id="tabsCtrl">
+			<ul>
+				<li><a href="#tab1">Display All Films</a></li>
+				<li><a href="#tab2">Insert a Film</a></li>
+				<li><a href="#tab4">Raw Data</a></li>
+			</ul>
+			
+			<div id="tab1" >
+			
+				<label for="search-keyword" >Keyword: </label>
+				<input id="search-keyword" type="text" placeholder="Search by film name">
+				<label for="tab1-format-type">Format: </label>
+				<select id="tab1-format-type">
+					<option value="json">JSON</option>
+				    <option value="xml">XML</option>
+				</select>
+				<input id="get-all-films" type="submit" value="Get Films" />
+				<div id="table-content" ><p>Press the button to retrieve the films.</p></div>
+				
+				<div id="tab1-dialog" >
+					<label for="id-update" >Film ID: </label>
+					<input type="text" id="id-update" readonly/>
+					<br>
+					<br>
+					<label for="title-update" >Title: </label>
+					<input type="text" id="title-update" placeholder="Enter Film Title" />
+					<br>
+					<br>
+					<label for="year-update" >Year: </label>
+					<input type="text" id="year-update" placeholder="Enter Year" />
+					<br>
+					<br>
+					<label for="director-update" >Director: </label>
+					<input type="text" id="director-update" placeholder="Enter Director" />
+					<br>
+					<br>
+					<label for="stars-update" >Stars: </label>
+					<input type="text" id="stars-update" placeholder="Enter Cast" />
+					<br>
+					<br>
+					<label for="review-update" >Review: </label>
+					<br>
+					<textarea type="text" id="review-update" placeholder="Leave a Review" ></textarea>
+					<br>
+					<br>
+					<label for="update-format-type">Insert Format: </label>
+					<select id="update-format-type">
+						<option value="json">JSON</option>
+					    <option value="xml">XML</option>
+					</select>
+					<br>
+					<br>
+					<input type="submit" id="update-row" value="Update" />
+				</div>
+			</div>
+
+			<div id="tab2">
+				<fieldset id="insert-field" >
+					<label for="title-field" >Title: </label>
+					<input type="text" id="title-field" placeholder="Enter Film Title" />
+					<br>
+					<br>
+					<label for="year-field" >Year: </label>
+					<input type="text" id="year-field" placeholder="Enter Year" />
+					<br>
+					<br>
+					<label for="director-field" >Director: </label>
+					<input type="text" id="director-field" placeholder="Enter Director" />
+					<br>
+					<br>
+					<label for="stars-field" >Stars: </label>
+					<input type="text" id="stars-field" placeholder="Enter Cast" />
+					<br>
+					<br>
+					<label for="review-field" >Review: </label>
+					<br>
+					<textarea type="text" id="review-field" placeholder="Leave a Review" ></textarea>
+					<br>
+					<br>
+					<label for="insert-format-type">Insert Format: </label>
+					<select id="insert-format-type">
+						<option value="json">JSON</option>
+					    <option value="xml">XML</option>
+					</select>
+					<br>
+					<br>
+					<input type="submit" id="insert-row" value="Submit" />
+				</fieldset>
+			</div>
+			<div id="tab2-dialog">
+				<p></p>
+			</div>
+
+			<div id="tab4">
+				<div id="raw-data-display" class="appearance" >
+					<pre id="raw-data" >No data to display! Please request some data.</pre>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+#raw-data-display {
+	width: 1200px;
+	height: 600px;
+	margin-top: 25px;
+	background-color: #b3c8d0;
+	padding: 5pt 5pt 5pt 5pt;
+	overflow: scroll;
+}
+
+.appearance {
+	background-color: #b3c8d0;
+	color: black;
+	border: 5px solid #a9a9a9;
+}
+
+#review-field, #review-update {
+	width: 500px;
+	height: 200px;
+}
+
+.ui-icon-trash {
+  -ms-transform: scale(3); /* IE 9 */
+  -webkit-transform: scale(3); /* Chrome, Safari, Opera */
+  transform: scale(3);
+  background-color: red;
+}
+
+.ui-icon-trash:hover{
+  background-color: "black";
+}
